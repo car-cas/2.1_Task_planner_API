@@ -13,7 +13,10 @@ import java.util.List;
 @Service
 public class UserServiceImpl implements UserService {
     List<User> users = new ArrayList<>();
-
+    public UserServiceImpl() {
+        this.users = new ArrayList<>();
+        this.users.add(new User("1","carlos","carlos@mail","123"));
+    }
     @Override
     public List<User> getAll() {
         return users;
